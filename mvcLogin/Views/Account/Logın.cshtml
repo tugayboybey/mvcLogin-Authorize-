@@ -1,0 +1,52 @@
+﻿
+@{ ViewBag.Title = "Login"; }
+
+@model mvcLogin.Models.VM.LoginVM
+
+<div class="row" style="margin-top:50px;">
+    <div class="col-lg-4 col-lg-offset-4">
+        <div class="panel panel-info">
+            <div class="panel-heading text-center">
+                Login Paneli
+            </div>
+            <div class="panel-body">
+                @using (Html.BeginForm())
+                {
+    @Html.AntiForgeryToken()
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="glyphicon glyphicon-user"></i>
+                        </div>
+                        @Html.TextBoxFor(x => x.Email, new { @placeholder = "E-posta Adresi Giriniz..", @class = "form-control" })
+
+
+                    </div>
+                                    <span class="text-danger">
+                                        @Html.ValidationMessageFor(x => x.Email)
+                                    </span>
+
+                                                    <div class="input-group">
+                                                        <div class="input-group-addon">
+                                                            <i class="glyphicon glyphicon-lock"></i>
+                                                        </div>
+                                                        @Html.PasswordFor(x => x.Password, new { @placeholder = "Parola Giriniz..", @class = "form-control" })
+
+
+                                                    </div>
+                                                                    <span class="text-danger">
+                                                                        @Html.ValidationMessageFor(x => x.Password)
+                                                                    </span>
+                                                                                    <br />
+                                                                                                    <input type="submit" class="btn btn-success btn-block center-block" name="name" value="Giriş Yap" />}
+            </div>
+            <div class="row">
+                <p class="text-danger text-center">
+                    @ViewBag.Message
+                </p>
+            </div>
+            <div class="panel-footer">
+                <h5 class="text-center"> &copy İ.Tugay  BOYBEY - @DateTime.Now.Year</h5>
+            </div>
+        </div>
+    </div>
+</div>
