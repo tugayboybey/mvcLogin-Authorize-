@@ -13,8 +13,7 @@ namespace mvcLogin.Models.Data.ProjeContext
         {
 
 
-            Database.Connection.ConnectionString = @"Server=DESKTOP-860742Q;Database=KD5MvcLogin;Uid=sa;Pwd=tugay1905;";
-
+          // Database.Connection.ConnectionString=Connection string yazılacak
 
         }
         public DbSet<ApplicationUser> Users { get; set; }
