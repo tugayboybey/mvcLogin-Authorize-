@@ -11,9 +11,9 @@ namespace mvcLogin.Models.Data.ProjeContext
     {
         public PorojectContext()
         {
-          //  Database.Connection.ConnectionString =Connection string yazılacak
 
 
+            Database.Connection.ConnectionString = @"Server=DESKTOP-860742Q;Database=KD5MvcLogin;Uid=sa;Pwd=tugay1905;";
 
 
         }

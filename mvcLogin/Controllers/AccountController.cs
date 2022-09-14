@@ -9,7 +9,7 @@ using mvcLogin.Models.VM;
 
 namespace mvcLogin.Controllers
 {
-   // [Authorize]
+   // [Authorize ]
     public class AccountController : Controller
     {
         // GET: Account
@@ -46,7 +46,7 @@ namespace mvcLogin.Controllers
         public ActionResult Logout()
         {
             FormsAuthentication.SignOut();
-            return RedirectToAction("Login");
+            return RedirectToAction("Logın");
         }
     }
 }

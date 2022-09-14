@@ -12,7 +12,7 @@
             <div class="panel-body">
                 @using (Html.BeginForm())
                 {
-    @Html.AntiForgeryToken()
+                    @Html.AntiForgeryToken()
                     <div class="input-group">
                         <div class="input-group-addon">
                             <i class="glyphicon glyphicon-user"></i>
@@ -21,23 +21,23 @@
 
 
                     </div>
-                                    <span class="text-danger">
-                                        @Html.ValidationMessageFor(x => x.Email)
-                                    </span>
+                    <span class="text-danger">
+                        @Html.ValidationMessageFor(x => x.Email)
+                    </span>
 
-                                                    <div class="input-group">
-                                                        <div class="input-group-addon">
-                                                            <i class="glyphicon glyphicon-lock"></i>
-                                                        </div>
-                                                        @Html.PasswordFor(x => x.Password, new { @placeholder = "Parola Giriniz..", @class = "form-control" })
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="glyphicon glyphicon-lock"></i>
+                        </div>
+                        @Html.PasswordFor(x => x.Password, new { @placeholder = "Parola Giriniz..", @class = "form-control" })
 
 
-                                                    </div>
-                                                                    <span class="text-danger">
-                                                                        @Html.ValidationMessageFor(x => x.Password)
-                                                                    </span>
-                                                                                    <br />
-                                                                                                    <input type="submit" class="btn btn-success btn-block center-block" name="name" value="Giriş Yap" />}
+                    </div>
+                    <span class="text-danger">
+                        @Html.ValidationMessageFor(x => x.Password)
+                    </span>
+                    <br />
+                    <input type="submit" class="btn btn-success btn-block center-block" name="name" value="Giriş Yap" />}
             </div>
             <div class="row">
                 <p class="text-danger text-center">
